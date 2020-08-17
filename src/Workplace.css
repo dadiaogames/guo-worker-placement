@@ -1,0 +1,71 @@
+.workplace {
+  height: 30%;
+  width: 96%;
+  margin: 2%;
+
+  border: 1px solid;
+
+  flex-shrink: 0;
+
+  display: flex;
+  overflow-x: scroll;
+}
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+
+  margin: 1%;
+  height: 90%;
+  width: 25%;
+
+  border: 1px solid;
+}
+
+.avatar-alt {
+  position: absolute;
+  top: 25%;
+  left: 12.5%;
+}
+
+.num-workers {
+  position: absolute;
+  top: 70%;
+  left: 83%;
+  font-size: 110%;
+  color: white;
+  background-color: red;
+}
+
+.avatar-img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  vertical-align: top;
+
+  /* border: 1px solid; */
+  width: 45%;
+  height: 90%;
+  margin: 1%;
+
+  font-size: 110%;
+
+}
+
+.illust-container {
+  vertical-align: top;
+
+  overflow: hidden;
+
+  border: 1px solid;
+  width: 25%;
+  height: 90%;
+  margin: 1%;
+}
+
+.illust {
+  width: 100%;
+  height: 100%;
+}

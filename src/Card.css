@@ -1,0 +1,21 @@
+.vcard-row {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: scroll;
+  vertical-align: top;
+
+  border: 1px solid;
+  margin: 2%;
+  width: 45%;
+  height: 95%;
+}
+
+.card {
+  flex-shrink: 0;
+  overflow: scroll;
+
+  margin: 5%;
+  width: 88%;
+  height: 30%;
+  border: 3px solid;
+}

@@ -1,0 +1,13 @@
+.central {
+  height: 55%;
+  margin: 2%;
+  margin-bottom: 0%;
+
+  border: 1px solid;
+}
+
+.market {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
