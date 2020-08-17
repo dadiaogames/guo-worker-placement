@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/guo-worker-placement/static/css/main.9e9cc1c4.chunk.css",
+    "main.js": "/guo-worker-placement/static/js/main.731543c3.chunk.js",
+    "main.js.map": "/guo-worker-placement/static/js/main.731543c3.chunk.js.map",
+    "runtime-main.js": "/guo-worker-placement/static/js/runtime-main.39e92136.js",
+    "runtime-main.js.map": "/guo-worker-placement/static/js/runtime-main.39e92136.js.map",
+    "static/js/2.92990554.chunk.js": "/guo-worker-placement/static/js/2.92990554.chunk.js",
+    "static/js/2.92990554.chunk.js.map": "/guo-worker-placement/static/js/2.92990554.chunk.js.map",
+    "index.html": "/guo-worker-placement/index.html",
+    "precache-manifest.eca3610f2a33f907176d5dfa4caf0f50.js": "/guo-worker-placement/precache-manifest.eca3610f2a33f907176d5dfa4caf0f50.js",
+    "service-worker.js": "/guo-worker-placement/service-worker.js",
+    "static/css/main.9e9cc1c4.chunk.css.map": "/guo-worker-placement/static/css/main.9e9cc1c4.chunk.css.map",
+    "static/js/2.92990554.chunk.js.LICENSE.txt": "/guo-worker-placement/static/js/2.92990554.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39e92136.js",
+    "static/js/2.92990554.chunk.js",
+    "static/css/main.9e9cc1c4.chunk.css",
+    "static/js/main.731543c3.chunk.js"
+  ]
+}
