@@ -145,20 +145,23 @@ function get_final_score(G, ctx) {
 
   G.final_score = score;
   G.ranking = "D";
-  if (score >= 0 && score < 20) {
+  if (score >= 0 && score < 30) {
     G.ranking = "C";
   }
-  else if (score >= 20 && score < 35) {
+  else if (score >= 30 && score < 50) {
     G.ranking = "B";
   }
-  else if (score >= 35 && score < 50) {
+  else if (score >= 50 && score < 100) {
     G.ranking = "A";
   }
-  else if (score >= 50 && score < 70) {
+  else if (score >= 100 && score < 200) {
     G.ranking = "S";
   }
-  else {
+  else if (score >= 200 && score < 300) {
     G.ranking = "SS";
+  }
+  else {
+    G.ranking = "SSS";
   }
 
   ctx.events.endGame();

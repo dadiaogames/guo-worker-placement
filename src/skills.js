@@ -16,13 +16,20 @@ export const SKILLS = [
   {desc: <span>拿取{food_icons[2]}时，价格-2$</span>,
   cost: 1,
   onTurnBegin(G, ctx) {
-    G.market[2].cost -= 2; // It should be at the market[2] and it's better than find which one is xinju
+    for (let workplace of G.market) {
+      if (workplace.food_type == 2) {
+        workplace.cost -= 2;
+      }
+    }
   },},
   {desc: <span>拿取{food_icons[3]}时，无需支付食材</span>,
   cost: 1,
   onTurnBegin(G, ctx) {
-    G.market[3].food_cost = -1;
-    G.market[4].food_cost = -1;
+    for (let workplace of G.market) {
+      if (workplace.food_type == 3) {
+        workplace.food_cost = -1;
+      }
+    }
   },},
   {desc: <span>拿取{food_icons[0]}时，获得$2</span>,
   cost: 1,

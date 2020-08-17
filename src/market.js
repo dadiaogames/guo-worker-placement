@@ -2,9 +2,9 @@ import React from 'react';
 import { food_icons } from './icons';
 export const RULES = `游戏目标: 在7天内获得尽可能多的分数
 在你的回合，可以放置郭老师，并做以下事情:
-* 拿取食物: 支付食物价格并拿取1个相应食物，拿取"红心火龙果"时需要额外支付1个食物
-* 拿取发展卡: 双击想要拿取的发展卡以获得之，拿取技能卡时，需要支付其费用
-放置郭老师时，如果该位置上已经有郭老师，则需要花2块钱/每个郭老师
+* 拿取食物: 支付食物价格并拿取1个相应食物，拿取"红心火龙果"时需要支付1个食物(猕猴桃或蓝莓)
+* 拿取发展卡: 技能卡和得分卡统称为发展卡，双击想要拿取的发展卡以获得之，拿取技能卡时，需要支付其费用
+放置郭老师时，如果该位置上已经有郭老师，则需要花2块钱/每个郭老师才能再次放置
 7天结束后进入算分，最终得分仅和拥有的得分卡有关
 策略提示:
 * 食物的价格每回合都会变，如果当前觉得太贵，可以之后再买
@@ -12,7 +12,15 @@ export const RULES = `游戏目标: 在7天内获得尽可能多的分数
 * 权衡好得分卡和食物的数量是得高分的关键，得分卡过少会导致分数不够，得分卡过多会导致食物不够
 * 游戏开始时，有2次免费拿取发展卡的机会(拿取技能卡时仍要支付费用)`;
 
-export const MARKET = [
+export const MARKET = [ 
+  {
+    title: <span>拿1张发展卡</span>,
+    cost: 0,
+    illust: "https://s1.ax1x.com/2020/08/13/axTt8P.png",
+    effect(G, ctx) {
+      G.picks += 1;
+    }
+  },
   {
     title: <span>{food_icons[0]}迷hotel</span>,
     cost: -1,
@@ -94,14 +102,7 @@ export const MARKET = [
       G.money += 3;
     }
   },
-  {
-    title: <span>拿1张发展卡</span>,
-    cost: 0,
-    illust: "https://s1.ax1x.com/2020/08/13/axTt8P.png",
-    effect(G, ctx) {
-      G.picks += 1;
-    }
-  },
+ 
   {
     title: <span>玩法教学</span>,
     cost: 0,
