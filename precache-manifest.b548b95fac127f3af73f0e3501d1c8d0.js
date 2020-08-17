@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0526ef4601d2341292c9c88b11c35f3",
+    "revision": "56e78df1424736cf62bfc37d6d488e66",
     "url": "/guo-worker-placement/index.html"
   },
   {
-    "revision": "6dd7737cad39137a6da2",
+    "revision": "b99003ebf2a9d58ce0a7",
     "url": "/guo-worker-placement/static/css/main.9e9cc1c4.chunk.css"
   },
   {
-    "revision": "b21b48e11a50166f07df",
-    "url": "/guo-worker-placement/static/js/2.92990554.chunk.js"
+    "revision": "695c4efe4c6e3417d171",
+    "url": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js"
   },
   {
     "revision": "55aea68582af89c017bd4961013c0115",
-    "url": "/guo-worker-placement/static/js/2.92990554.chunk.js.LICENSE.txt"
+    "url": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6dd7737cad39137a6da2",
-    "url": "/guo-worker-placement/static/js/main.0483a944.chunk.js"
+    "revision": "b99003ebf2a9d58ce0a7",
+    "url": "/guo-worker-placement/static/js/main.a99e900e.chunk.js"
   },
   {
     "revision": "7f55d38949c2c977bda9",
