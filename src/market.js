@@ -1,10 +1,22 @@
 import React from 'react';
 import { food_icons } from './icons';
+export const RULES = `游戏目标: 在7天内获得尽可能多的分数
+在你的回合，可以做以下事情:
+* 放置郭老师，拿取食物: 支付食物价格并拿取1个相应食物
+* 放置郭老师，拿取发展卡: 双击想要拿取的发展卡以获得之，拿取技能卡时，需要支付其费用
+* 使用技能卡: 双击技能卡以使用其"行动:"能力
+放置郭老师时，如果该位置上已经有郭老师，则需要花2块钱/每个郭老师
+7天结束后进入算分，最终得分仅和拥有的得分卡有关
+策略提示:
+* 食物的价格每回合都会变，如果当前觉得太贵，可以之后再买
+* 得分卡的效果是叠加的，所以当你对某种食物的获取能力很强时，要多拿该食物的得分卡
+* 权衡好得分卡和食物的数量是得高分的关键，得分卡过少会导致分数不够，得分卡过多会导致食物不够
+* 回合开始时，有2次免费拿取发展卡的机会(拿取技能卡时仍要支付费用)`;
 
 export const MARKET = [
   {
     title: <span>{food_icons[0]}迷hotel</span>,
-    cost: 0,
+    cost: -1,
     food_type: 0,
     illust: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597244405843&di=661d6e6add618fbeb6a529c1dede9e86&imgtype=0&src=http%3A%2F%2Fxs3.op.xywy.com%2Fapi.iu1.xywy.com%2Fcms%2F20170420%2F25751936b78f17285f47411819a413f835689.png",
     effect(G, ctx) {
@@ -84,11 +96,20 @@ export const MARKET = [
     }
   },
   {
-    title: <span>拿1张发展卡(双击拿取)</span>,
+    title: <span>拿1张发展卡</span>,
     cost: 0,
     illust: "https://s1.ax1x.com/2020/08/13/axTt8P.png",
     effect(G, ctx) {
       G.picks += 1;
+    }
+  },
+  {
+    title: <span>玩法教学</span>,
+    cost: 0,
+    illust: "https://dss1.bdstatic.com/6OF1bjeh1BF3odCf/it/u=3629808948,78649414&fm=74&app=80&f=JPEG&size=f121,140?sec=1880279984&t=ae4e8d4cabd5bfd5a0de0ed5b219a9cc",
+    effect(G, ctx) {
+      alert(RULES);
+      G.workers += 1;
     }
   },
  
