@@ -66,7 +66,7 @@ export const MARKET = [
   },
   {
     title: <span>{food_icons[3]}红心火龙果</span>,
-    cost: 0,
+    cost: 1,
     food_cost: 0,
     food_type: 3,
     illust: "https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3576916985,1409439418&fm=26&gp=0.jpg",

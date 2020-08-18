@@ -47,7 +47,7 @@ export const SKILLS = [
     G.workers += 1;
   },},
   {desc: <span>拿取{food_icons[3]}时，可拿取1张发展卡</span>,
-  cost: 1,
+  cost: 5,
   onGet3(G, ctx) {
     G.picks += 1;
   },},
