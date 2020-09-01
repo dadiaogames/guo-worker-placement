@@ -15,6 +15,7 @@ export const SKILLS = [
   },},
   {desc: <span>拿取{food_icons[2]}时，价格-2$</span>,
   cost: 1,
+  battlecry: true,
   onTurnBegin(G, ctx) {
     for (let workplace of G.market) {
       if (workplace.food_type == 2) {
@@ -24,6 +25,7 @@ export const SKILLS = [
   },},
   {desc: <span>拿取{food_icons[3]}时，无需支付食材</span>,
   cost: 1,
+  battlecry: true,
   onTurnBegin(G, ctx) {
     for (let workplace of G.market) {
       if (workplace.food_type == 3) {
@@ -47,7 +49,7 @@ export const SKILLS = [
     G.workers += 1;
   },},
   {desc: <span>拿取{food_icons[3]}时，可拿取1张发展卡</span>,
-  cost: 5,
+  cost: 4,
   onGet3(G, ctx) {
     G.picks += 1;
   },},
@@ -111,33 +113,63 @@ export const SKILLS = [
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[0]}</span>,
-  cost: 2,
+  cost: 1,
   onTurnBegin(G, ctx) {
     G.foods[0] += 1;
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[1]}</span>,
-  cost: 4,
+  cost: 3,
   onTurnBegin(G, ctx) {
     G.foods[1] += 1;
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[2]}</span>,
-  cost: 6,
+  cost: 4,
   onTurnBegin(G, ctx) {
     G.foods[2] += 1;
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[3]}</span>,
-  cost: 8,
+  cost: 6,
   onTurnBegin(G, ctx) {
     G.foods[3] += 1;
 
   },},
   {desc: <span>回合开始时，获得$2</span>,
-  cost: 4,
+  cost: 1,
   onTurnBegin(G, ctx) {
     G.money += 2;
 
   },},
+
+  {
+    desc: <span>行动: 重置1张技能卡</span>,
+    cost: 1,
+    action(G, ctx, self) {
+      let exhausted_skills = G.skills.filter(x => (x.exhausted && x!=self));
+      let skill = ctx.random.Shuffle(exhausted_skills)[0];
+      if (skill) {
+        skill.exhausted = false;
+      }
+    },
+  },
+  
+  {
+    desc: <span>行动: 获得{guo_icon}</span>,
+    cost: 1,
+    action(G, ctx, self) {
+      G.workers += 1;
+    },
+  },
+
+  {
+    desc: <span>行动: $1→拿1张发展卡</span>,
+    cost: 1,
+    action(G, ctx, self) {
+      if (pay(G, ctx, 1)) {
+        G.picks += 1;
+      }
+    },
+  },
 ];

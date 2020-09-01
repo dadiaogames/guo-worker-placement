@@ -95,7 +95,7 @@ export class Board extends React.Component {
       deck1 = {this.process_deck_data("scorers")}
       deck2 = {this.process_deck_data("skills")}
     />;
-    let centrals = {market, field, home};
+    let centrals = {market, field, home};  // EH: Reconstruct this, all selectors should use list instead of object 
     let next_day = "下一天";
     if (this.props.G.day >= 7) {
       next_day = "算分";
@@ -105,7 +105,8 @@ export class Board extends React.Component {
         data = {
           <span style={{lineHeight:"250%"}}>
             第{this.props.G.day}/7天 &nbsp;&nbsp;&nbsp;
-            {_.times(this.props.G.workers, ()=>(guo_icon))}
+            {_.times(this.props.G.workers, ()=>(guo_icon))} &nbsp;&nbsp;&nbsp;
+            👌: {this.props.G.picks}
           </span>
         }
       />

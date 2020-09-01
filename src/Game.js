@@ -28,11 +28,10 @@ function setup(ctx) {
 
   G.day = 0;
 
-  G.scorer_deck = ctx.random.Shuffle(SCORERS);
-  G.skill_deck = ctx.random.Shuffle(SKILLS);
-  // EH: change this
-  G.scorer_deck = [...G.scorer_deck, ...G.scorer_deck].map(x=>({...x}));
-  G.skill_deck = [...G.skill_deck, ...G.skill_deck].map(x=>({...x}));
+  G.scorer_deck = [...SCORERS, ...SCORERS].map(x=>({...x}));
+  G.skill_deck = [...SKILLS, ...SKILLS].map(x=>({...x}));
+  G.scorer_deck = ctx.random.Shuffle(G.scorer_deck);
+  G.skill_deck = ctx.random.Shuffle(G.skill_deck);
 
   G.scorer_list = [];
   G.skill_list = [];
@@ -43,7 +42,7 @@ function setup(ctx) {
 
   G.prices = ctx.random.Shuffle(init_prices());
 
-  G.picks = 2;
+  G.picks = 0;
 
   return G;
 }
@@ -119,7 +118,7 @@ export function get_score(scorer, resources) {
       calc[r] -= 1;
     }
     else {
-      calc[4] += r;
+      calc[4] += r;  // it's reducing the amount of money required
     }
   }
 
@@ -176,7 +175,7 @@ function pick(G, ctx, original_deck, idx) {
       let skill = G.skill_list[idx];
       if (pay(G, ctx, skill.cost)) {
         move(G, ctx, "skill_list", "skills", idx);
-        if (skill.onTurnBegin) {
+        if (skill.onTurnBegin && skill.battlecry) {
           skill.onTurnBegin(G, ctx, skill);
         }
       }
@@ -220,6 +219,12 @@ export const HP = {
       G.day += 1;
       G.workers = 3;
       G.money += 2;
+      G.picks = 0;
+
+      // If it's first day
+      if (G.day == 1) {
+        G.picks += 2;
+      }
 
       // Setup market
       G.market = MARKET.map(x => ({...x}));
