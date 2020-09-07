@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/guo-worker-placement/precache-manifest.5b9b461415747c23c5c736c147c72569.js"
+  "/guo-worker-placement/precache-manifest.127186f94dd4e116e0b48762998429c3.js"
 );
 
 self.addEventListener('message', (event) => {
