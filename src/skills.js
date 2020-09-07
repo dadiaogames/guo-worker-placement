@@ -164,10 +164,10 @@ export const SKILLS = [
   },
 
   {
-    desc: <span>行动: $1→拿1张发展卡</span>,
+    desc: <span>行动: $2→拿1张发展卡</span>,
     cost: 1,
     action(G, ctx, self) {
-      if (pay(G, ctx, 1)) {
+      if (pay(G, ctx, 2)) {
         G.picks += 1;
       }
     },
