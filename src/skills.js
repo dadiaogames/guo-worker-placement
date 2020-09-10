@@ -49,7 +49,7 @@ export const SKILLS = [
     G.workers += 1;
   },},
   {desc: <span>拿取{food_icons[3]}时，可拿取1张发展卡</span>,
-  cost: 4,
+  cost: 3,
   onGet3(G, ctx) {
     G.picks += 1;
   },},
@@ -164,10 +164,10 @@ export const SKILLS = [
   },
 
   {
-    desc: <span>行动: $2→拿1张发展卡</span>,
+    desc: <span>行动: $1→拿1张发展卡</span>,
     cost: 1,
     action(G, ctx, self) {
-      if (pay(G, ctx, 2)) {
+      if (pay(G, ctx, 1)) {
         G.picks += 1;
       }
     },
