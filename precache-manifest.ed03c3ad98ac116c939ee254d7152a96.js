@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8ab0a5df4b42077962eb99de1da7d5f",
+    "revision": "d01ec1c73148e3ee684e669272825bfd",
     "url": "/guo-worker-placement/index.html"
   },
   {
-    "revision": "92d04efa97c50609adf2",
+    "revision": "7b239132dce3fdbc9da1",
     "url": "/guo-worker-placement/static/css/main.2bf5dd24.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92d04efa97c50609adf2",
-    "url": "/guo-worker-placement/static/js/main.990b972d.chunk.js"
+    "revision": "7b239132dce3fdbc9da1",
+    "url": "/guo-worker-placement/static/js/main.922b16b0.chunk.js"
   },
   {
     "revision": "7f55d38949c2c977bda9",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/guo-worker-placement/static/css/main.2bf5dd24.chunk.css",
-    "main.js": "/guo-worker-placement/static/js/main.990b972d.chunk.js",
-    "main.js.map": "/guo-worker-placement/static/js/main.990b972d.chunk.js.map",
+    "main.js": "/guo-worker-placement/static/js/main.922b16b0.chunk.js",
+    "main.js.map": "/guo-worker-placement/static/js/main.922b16b0.chunk.js.map",
     "runtime-main.js": "/guo-worker-placement/static/js/runtime-main.39e92136.js",
     "runtime-main.js.map": "/guo-worker-placement/static/js/runtime-main.39e92136.js.map",
     "static/js/2.aab2c21e.chunk.js": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js",
     "static/js/2.aab2c21e.chunk.js.map": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js.map",
     "index.html": "/guo-worker-placement/index.html",
-    "precache-manifest.0ced85618ddcdfd45291dcc3aba704cb.js": "/guo-worker-placement/precache-manifest.0ced85618ddcdfd45291dcc3aba704cb.js",
+    "precache-manifest.ed03c3ad98ac116c939ee254d7152a96.js": "/guo-worker-placement/precache-manifest.ed03c3ad98ac116c939ee254d7152a96.js",
     "service-worker.js": "/guo-worker-placement/service-worker.js",
     "static/css/main.2bf5dd24.chunk.css.map": "/guo-worker-placement/static/css/main.2bf5dd24.chunk.css.map",
     "static/js/2.aab2c21e.chunk.js.LICENSE.txt": "/guo-worker-placement/static/js/2.aab2c21e.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.39e92136.js",
     "static/js/2.aab2c21e.chunk.js",
     "static/css/main.2bf5dd24.chunk.css",
-    "static/js/main.990b972d.chunk.js"
+    "static/js/main.922b16b0.chunk.js"
   ]
 }
