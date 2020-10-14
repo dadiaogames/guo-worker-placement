@@ -24,7 +24,7 @@ export const SKILLS = [
     }
   },},
   {desc: <span>拿取{food_icons[3]}时，无需支付食材</span>,
-  cost: 1,
+  cost: 2,
   battlecry: true,
   onTurnBegin(G, ctx) {
     for (let workplace of G.market) {
@@ -49,7 +49,7 @@ export const SKILLS = [
     G.workers += 1;
   },},
   {desc: <span>拿取{food_icons[3]}时，可拿取1张发展卡</span>,
-  cost: 3,
+  cost: 4,
   onGet3(G, ctx) {
     G.picks += 1;
   },},
@@ -119,28 +119,28 @@ export const SKILLS = [
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[1]}</span>,
-  cost: 3,
+  cost: 4,
   onTurnBegin(G, ctx) {
     G.foods[1] += 1;
 
   },},
   {desc: <span>回合开始时，获得1{food_icons[2]}</span>,
-  cost: 4,
+  cost: 8,
   onTurnBegin(G, ctx) {
     G.foods[2] += 1;
 
   },},
-  {desc: <span>回合开始时，获得1{food_icons[3]}</span>,
-  cost: 6,
+  {desc: <span>回合开始时，消耗$2，获得1{food_icons[3]}</span>,
+  cost: 4,
   onTurnBegin(G, ctx) {
-    G.foods[3] += 1;
-
+    if (pay(G, ctx, 2)) {
+      G.foods[3] += 1;
+    }
   },},
   {desc: <span>回合开始时，获得$2</span>,
   cost: 1,
   onTurnBegin(G, ctx) {
     G.money += 2;
-
   },},
 
   {

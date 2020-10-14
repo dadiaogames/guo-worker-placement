@@ -28,21 +28,21 @@ function setup(ctx) {
 
   G.day = 0;
 
-  G.scorer_deck = [...SCORERS, ...SCORERS].map(x=>({...x}));
-  G.skill_deck = [...SKILLS, ...SKILLS].map(x=>({...x}));
+  G.scorer_deck = [...SCORERS, ...SCORERS];
+  G.skill_deck = [...SKILLS, ...SKILLS];
   G.scorer_deck = ctx.random.Shuffle(G.scorer_deck);
   G.skill_deck = ctx.random.Shuffle(G.skill_deck);
 
   G.scorer_list = [];
   G.skill_list = [];
-  G.scorers = [];
+  G.scorers = [ctx.random.Shuffle(SCORERS)[0]];
   G.skills = [];
 
   G.market = []; // This is not set in setup
 
   G.prices = ctx.random.Shuffle(init_prices());
 
-  G.picks = 0;
+  G.picks = 1;
 
   return G;
 }
@@ -52,6 +52,7 @@ function shuffle_decks(G, ctx, times) {
     G.scorer_deck = ctx.random.Shuffle(G.scorer_deck);
     G.skill_deck = ctx.random.Shuffle(G.skill_deck);
     G.prices = ctx.random.Shuffle(G.prices);
+    G.scorers = [ctx.random.Shuffle(SCORERS)[0]];
   }
   // EH: reconstruct this part
   // If a shuffle function is at the outside, then the "onBegin" of the turn should be changed by adding stages
@@ -219,12 +220,16 @@ export const HP = {
       G.day += 1;
       G.workers = 3;
       G.money += 2;
-      G.picks = 0;
 
-      // If it's first day
-      if (G.day == 1) {
-        G.picks += 2;
+      if (G.day > 1) {
+        G.picks = 0;
       }
+
+      // // If it's first day
+      // if (G.day == 1) {
+      //   G.picks += 1;
+      //   G.scorers.push(ctx.random.Shuffle(SCORERS)[0]);
+      // }
 
       // Setup market
       G.market = MARKET.map(x => ({...x}));
