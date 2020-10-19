@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b076c27e23e13ead1eac4854d85d8a0c",
+    "revision": "abaf947baa52bb1cf07c48f01528dd61",
     "url": "/guo-worker-placement/index.html"
   },
   {
